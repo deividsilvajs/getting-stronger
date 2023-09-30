@@ -17,16 +17,16 @@ const WeightHistoryTable = () => {
 		<table>
 			<thead>
 				<tr>
-					<th>Peso</th>
 					<th>Data</th>
+					<th>Peso</th>
 				</tr>
 			</thead>
 			<tbody>
 				{testData.map(data => {
 					return (
 						<tr>
-							<td>{data.weight}</td>
 							<td>{data.id}</td>
+							<td>{data.weight}</td>
 						</tr>
 					)
 				})}
