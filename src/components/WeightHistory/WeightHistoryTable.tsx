@@ -8,9 +8,7 @@ const WeightHistoryTable = () => {
 		{ id: '2023-09-05', weight: 70 },
 		{ id: '2023-09-06', weight: 70 },
 		{ id: '2023-09-07', weight: 70 },
-		{ id: '2023-09-08', weight: 70 },
-		{ id: '2023-09-09', weight: 70 },
-		{ id: '2023-09-10', weight: 70 },
+		{ id: '2023-09-08', weight: 70 }
 	]
 
 	return (

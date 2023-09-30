@@ -1,3 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  font-family: -apple-system, sans-serif;
+  font-family: sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  font-size: 0.9em;
+  min-width: 70%;
+  overflow: hidden;
+  margin: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+thead tr {
+  background-color: #09C184;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+th, td {
+  padding: 12px 15px;
+}
+
+tbody tr {
+  border-bottom: 1px solid #DDDDDD;
+}
+
+tbody tr:nth-of-type(even) {
+  background-color: #F3F3F3;
+}
+
+tbody tr:last-of-type {
+  border-bottom: 2px solid #09C184;
 }
