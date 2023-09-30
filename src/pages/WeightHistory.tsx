@@ -1,7 +1,15 @@
+import WeightHistoryHeader from 'components/WeightHistory/WeightHistoryHeader'
+import WeightHistoryTable from 'components/WeightHistory/WeightHistoryTable'
+import RecordWeightButton from 'components/WeightHistory/RecordWeightButton'
+
 const WeightHistory = () => {
 
 	return (
-		<h1>Histórico de Peso</h1>
+		<div>
+			<WeightHistoryHeader />
+			<WeightHistoryTable />
+			<RecordWeightButton />
+		</div>
 	)
 
 }
