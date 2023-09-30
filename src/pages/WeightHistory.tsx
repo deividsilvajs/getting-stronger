@@ -5,7 +5,7 @@ import RecordWeightButton from 'components/WeightHistory/RecordWeightButton'
 const WeightHistory = () => {
 
 	return (
-		<div>
+		<div className='container'>
 			<WeightHistoryHeader />
 			<WeightHistoryTable />
 			<RecordWeightButton />

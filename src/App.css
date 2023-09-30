@@ -7,12 +7,19 @@ body {
   font-family: sans-serif;
 }
 
+.container {
+  width: 70%;
+  margin: auto;
+}
+
+/* TABLE */
+
 table {
   border-collapse: collapse;
   font-size: 0.9em;
-  min-width: 70%;
+  width: 100%;
   overflow: hidden;
-  margin: auto;
+  margin: 30px auto 15px auto;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   text-align: center;
 }
@@ -37,4 +44,22 @@ tbody tr:nth-of-type(even) {
 
 tbody tr:last-of-type {
   border-bottom: 2px solid #09C184;
+}
+
+/* --- */
+
+.record-button {
+  background-color: #0D192B;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  font-size: 1.0em;
+  font-weight: bold;
+  transition: background-color 500ms;
+  cursor: pointer;
+}
+
+.record-button:hover {
+  background-color: #081324;
 }
