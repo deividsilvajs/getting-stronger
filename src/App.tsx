@@ -1,8 +1,8 @@
 import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 
-import Main from './pages/Main'
-import WeightHistory from './pages/WeightHistory'
+import Main from 'pages/Main'
+import WeightHistory from 'pages/WeightHistory'
 
 const App = () => {
 
