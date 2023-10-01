@@ -1,3 +1,5 @@
+import { format, parseISO } from 'date-fns'
+
 import DeleteButton from 'components/DeleteButton'
 
 import { testWeights } from 'testData'
@@ -18,8 +20,8 @@ const WeightHistoryTable = () => {
 					{testWeights.map(data => {
 						return (
 							<tr key={data.id}>
-								<td>{data.id}</td>
-								<td>{data.weight}</td>
+								<td>{format(parseISO(data.id), 'dd/MM')}</td>
+								<td>{data.weight}kg</td>
 								<td><DeleteButton /></td>
 							</tr>
 						)
