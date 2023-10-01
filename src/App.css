@@ -1,6 +1,12 @@
+:root {
+  --dark-text: #010300;
+  --light-text: #F7F8FC;
+}
+
 * {
   margin: 0;
   padding: 0;
+  color: var(--dark-text);
 }
 
 body {
@@ -14,26 +20,21 @@ body {
 
 /* TABLE */
 
-.table-container {
-  max-height: 400px;
-  overflow: auto;
-  margin: 20px 0;
-}
-
 table {
+  margin-top: 20px;
   border-collapse: collapse;
   font-size: 0.9em;
   width: 100%;
   overflow: hidden;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   text-align: center;
   border-radius: 6px 6px 0 0;
 }
 
 thead tr {
-  background-color: #09c184;
-  color: #FFFFFF;
+  background-color: #BBDEC6;
   font-weight: bold;
+  border-left: 2px solid #BBDEC6;
+  border-right: 2px solid #BBDEC6;
 }
 
 th, td {
@@ -42,6 +43,9 @@ th, td {
 
 tbody tr {
   border-bottom: 1px solid #DDDDDD;
+  border-left: 2px solid #BBDEC6;
+  border-right: 2px solid #BBDEC6;
+  box-sizing: border-box;
 }
 
 tbody tr:nth-of-type(even) {
@@ -62,7 +66,6 @@ button {
 }
 
 .button-logo {
-  width: 16px;
   padding: 6px 4px;
   background-color: #AF212F;
 }
@@ -71,12 +74,10 @@ button {
   border-bottom: 2px solid black;
   padding: 8px;
   font-size: 0.8em;
-  margin-top: 8px;
 }
 
 .delete-button {
   background: linear-gradient(to right, #DC3545, #AF212F);
-  color: #FFFFFF;
   font-weight: normal;
   border-radius: 6px;
   overflow: hidden;
@@ -90,11 +91,12 @@ button {
 
 #delete-button-text {
   margin: 0 6px;
+  color: var(--light-text);
 }
 
 .record-button {
-  background: #0c5149;
-  color: #FFFFFF;
+  background: #314C53;
+  color: var(--light-text);
   font-size: 1em;
   padding: 10px;
   width: 100%;
