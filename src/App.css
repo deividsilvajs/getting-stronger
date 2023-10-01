@@ -27,10 +27,11 @@ table {
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   text-align: center;
+  border-radius: 6px 6px 0 0;
 }
 
 thead tr {
-  background: linear-gradient(to left, #09C184, #0A8967);
+  background-color: #09c184;
   color: #FFFFFF;
   font-weight: bold;
 }
@@ -67,12 +68,9 @@ button {
 }
 
 .homepage-button {
-  border: 1px solid black;
-  border-bottom: none;
-  border-right: none;
+  border-bottom: 2px solid black;
   padding: 8px;
   font-size: 0.8em;
-  border-radius: 6px 0 0 0;
   margin-top: 8px;
 }
 
@@ -80,6 +78,8 @@ button {
   background: linear-gradient(to right, #DC3545, #AF212F);
   color: #FFFFFF;
   font-weight: normal;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 .button-content {
@@ -93,7 +93,7 @@ button {
 }
 
 .record-button {
-  background: linear-gradient(to right, #09C184, #0A8967);
+  background: #0c5149;
   color: #FFFFFF;
   font-size: 1em;
   padding: 10px;

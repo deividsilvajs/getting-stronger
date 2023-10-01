@@ -1,7 +1,7 @@
 const RecordWeightButton = () => {
 
 	return (
-		<button className='record-button'>Registrar Peso</button>
+		<button className='record-button'>Salvar</button>
 	)
 
 }
