@@ -1,3 +1,5 @@
+import DeleteButton from 'components/DeleteButton'
+
 import { testWeights } from 'testData'
 
 const WeightHistoryTable = () => {
@@ -9,6 +11,7 @@ const WeightHistoryTable = () => {
 					<tr>
 						<th>Data</th>
 						<th>Peso</th>
+						<th></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -17,6 +20,7 @@ const WeightHistoryTable = () => {
 							<tr key={data.id}>
 								<td>{data.id}</td>
 								<td>{data.weight}</td>
+								<td><DeleteButton /></td>
 							</tr>
 						)
 					})}
