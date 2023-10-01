@@ -27,11 +27,10 @@ table {
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   text-align: center;
-  border-radius: 10px 0 0 0;
 }
 
 thead tr {
-  background: linear-gradient(to left, #09C184, #0a8967);
+  background: linear-gradient(to left, #09C184, #0A8967);
   color: #FFFFFF;
   font-weight: bold;
 }
@@ -57,15 +56,25 @@ tbody tr:last-of-type {
 button {
   cursor: pointer;
   border: none;
+  background-color: transparent;
+  font-weight: bold;
+}
+
+.homepage-button {
+  border: 1px solid black;
+  border-bottom: none;
+  border-right: none;
+  padding: 8px;
+  font-size: 0.8em;
+  border-radius: 6px 0 0 0;
+  margin-top: 8px;
 }
 
 .record-button {
-  background: linear-gradient(to right, #09C184, #0a8967);
+  background: linear-gradient(to right, #09C184, #0A8967);
   color: #FFFFFF;
-  font-weight: bold;
+  font-size: 1em;
   padding: 10px;
   width: 100%;
-  font-size: 0.9em;
-  transition: border-color 500ms;
-  border-radius: 0 0 10px 0;
+  border-radius: 0 0 6px 0;
 }
