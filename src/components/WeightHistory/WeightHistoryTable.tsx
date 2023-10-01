@@ -14,7 +14,7 @@ const WeightHistoryTable = () => {
 				<tbody>
 					{testWeights.map(data => {
 						return (
-							<tr>
+							<tr key={data.id}>
 								<td>{data.id}</td>
 								<td>{data.weight}</td>
 							</tr>
