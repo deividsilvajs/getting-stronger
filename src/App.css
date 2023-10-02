@@ -32,9 +32,12 @@ table {
 
 thead tr {
   background-color: #BBDEC6;
-  font-weight: bold;
   border-left: 2px solid #BBDEC6;
   border-right: 2px solid #BBDEC6;
+}
+
+.thead-icon {
+  margin-left: 2px;
 }
 
 th, td {
@@ -71,7 +74,7 @@ button {
 }
 
 .homepage-button {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #010300;
   padding: 8px;
   font-size: 0.8em;
 }
