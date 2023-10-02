@@ -25,6 +25,16 @@ button {
   font-weight: bold;
 }
 
+.success-button {
+  background-color: #314C53;
+  color: var(--light-text);
+  transition: background-color 500ms;
+}
+
+.success-button:hover {
+  background-color: #26464E;
+}
+
 #homepage-button {
   border-bottom: 2px solid #010300;
   padding: 8px;

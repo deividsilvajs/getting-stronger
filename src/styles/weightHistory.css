@@ -43,8 +43,6 @@ tbody tr:last-of-type {
 }
 
 #record-button {
-  background: #314C53;
-  color: var(--light-text);
   font-size: 1em;
   padding: 10px;
   width: 100%;
