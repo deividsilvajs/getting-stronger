@@ -22,7 +22,6 @@ button {
   cursor: pointer;
   border: none;
   background-color: transparent;
-  overflow: hidden;
   font-weight: bold;
 }
 
@@ -36,8 +35,8 @@ button {
 
 #delete-button {
   background-color: #DC3545;
-  border: 1px solid #A01F2C;
   color: var(--light-text);
   padding: 5px;
   border-radius: 6px;
+  font-weight: normal;
 }
