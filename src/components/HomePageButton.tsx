@@ -1,7 +1,7 @@
 const HomePageButton = () => {
 
 	return (
-		<button className='homepage-button'>Página Inicial</button>
+		<button id='homepage-button'>Página Inicial</button>
 	)
 
 }

@@ -1,6 +1,6 @@
 const WeightDate = () => {
 	return (
-		<div className='button-content'>
+		<div className='thead-tag'>
 			<span>Data</span>
 			<img className='thead-icon' src={require('icons/calendar.png')} alt='calendar-icon' />
 		</div>

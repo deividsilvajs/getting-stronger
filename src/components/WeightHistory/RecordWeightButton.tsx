@@ -1,7 +1,7 @@
 const RecordWeightButton = () => {
 
 	return (
-		<button className='record-button'>Salvar</button>
+		<button id='record-button'>Salvar</button>
 	)
 
 }
