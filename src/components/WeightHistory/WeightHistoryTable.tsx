@@ -1,5 +1,6 @@
 import { format, parseISO } from 'date-fns'
 
+import SelectWeightsButtons from './WeightHistoryTable/SelectWeightsButtons'
 import DeleteButton from 'components/DeleteButton'
 
 import { testWeights } from 'testData'
@@ -8,6 +9,7 @@ const WeightHistoryTable = () => {
 
 	return (
 		<div className='table-container'>
+			<SelectWeightsButtons />
 			<table>
 				<thead>
 					<tr>

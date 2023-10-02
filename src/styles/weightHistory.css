@@ -1,3 +1,14 @@
+#select-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.select-button {
+  border-bottom: 1px solid #010300;
+  font-weight: normal;
+}
+
 table {
   border-collapse: collapse;
   font-size: 0.9em;
