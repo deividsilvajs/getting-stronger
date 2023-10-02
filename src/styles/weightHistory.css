@@ -53,14 +53,7 @@ tbody tr:last-of-type {
 
 @media (max-width: 1050px) {
 
-  table {
-    width: 95%;
-    margin: auto;
-  }
-
-  #record-button {
-    display: block;
-    width: 95%;
-    margin: auto;
+  .container {
+    margin: 0 20px;
   }
 }
