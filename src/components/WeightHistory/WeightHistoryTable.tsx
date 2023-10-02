@@ -1,7 +1,5 @@
 import { format, parseISO } from 'date-fns'
 
-import WeightDate from './WeightHistoryTable/WeightDate'
-import Weight from './WeightHistoryTable/Weight'
 import DeleteButton from 'components/DeleteButton'
 
 import { testWeights } from 'testData'
@@ -13,8 +11,8 @@ const WeightHistoryTable = () => {
 			<table>
 				<thead>
 					<tr>
-						<th><WeightDate /></th>
-						<th><Weight /></th>
+						<th>Data</th>
+						<th>Peso</th>
 						<th></th>
 					</tr>
 				</thead>

@@ -1,5 +1,4 @@
 table {
-  margin-top: 20px;
   border-collapse: collapse;
   font-size: 0.9em;
   width: 100%;
@@ -57,7 +56,6 @@ tbody tr:last-of-type {
   table {
     width: 95%;
     margin: auto;
-    margin-top: 20px;
   }
 
   #record-button {

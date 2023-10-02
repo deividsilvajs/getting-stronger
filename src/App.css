@@ -22,34 +22,22 @@ button {
   cursor: pointer;
   border: none;
   background-color: transparent;
+  overflow: hidden;
   font-weight: bold;
-}
-
-.button-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 #homepage-button {
   border-bottom: 2px solid #010300;
   padding: 8px;
   font-size: 0.8em;
+  border-radius: 0 0 0 0;
+  margin-bottom: 20px;
 }
 
 #delete-button {
-  background: linear-gradient(to right, #DC3545, #AF212F);
-  font-weight: normal;
-  border-radius: 6px;
-  overflow: hidden;
-}
-
-#delete-button-text {
-  margin: 0 6px;
+  background-color: #DC3545;
+  border: 1px solid #A01F2C;
   color: var(--light-text);
-}
-
-#delete-button-logo {
-  padding: 6px 4px;
-  background-color: #AF212F;
+  padding: 5px;
+  border-radius: 6px;
 }
