@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { format, parseISO } from 'date-fns'
 
 import { Weights } from 'types/weight'
@@ -9,11 +10,17 @@ import { testWeights } from 'testData'
 
 const WeightHistoryTable = () => {
 
-	const WeightBlocks = () => {
-		const blocks: Weights = []
+	const [currentBlock, setCurrentBlock] = useState(0)
+
+	const weightBlocks = () => {
+		let currentBlock = 0
+		const blocks: Weights[] = [[]]
 		testWeights.forEach(weight => {
-			if (blocks.length < 8) {
-				blocks.push(weight)
+			if (blocks[currentBlock].length < 6) {
+				blocks[currentBlock].push(weight)
+			} else {
+				currentBlock++
+            	blocks[currentBlock] = [weight]
 			}
 		})
 		return blocks
@@ -31,7 +38,7 @@ const WeightHistoryTable = () => {
 					</tr>
 				</thead>
 				<tbody>
-					{WeightBlocks().map(data => {
+					{weightBlocks()[currentBlock].map(data => {
 						return (
 							<tr key={data.id}>
 								<td>{format(parseISO(data.id), 'dd/MM')}</td>
