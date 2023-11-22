@@ -10,7 +10,7 @@ import { testWeights } from 'testData'
 
 const WeightHistoryTable = () => {
 
-	const [currentBlock, setCurrentBlock] = useState(0)
+	const [currentBlockToShow, setCurrentBlockToShow] = useState(0)
 
 	const weightBlocks = () => {
 		let currentBlock = 0
@@ -28,7 +28,9 @@ const WeightHistoryTable = () => {
 
 	return (
 		<div className='table-container'>
-			<SelectWeightsButtons />
+			<SelectWeightsButtons
+				setCurrentBlockToShow={setCurrentBlockToShow}
+			/>
 			<table>
 				<thead>
 					<tr>
@@ -38,7 +40,7 @@ const WeightHistoryTable = () => {
 					</tr>
 				</thead>
 				<tbody>
-					{weightBlocks()[currentBlock].map(data => {
+					{weightBlocks()[currentBlockToShow].map(data => {
 						return (
 							<tr key={data.id}>
 								<td>{format(parseISO(data.id), 'dd/MM')}</td>
