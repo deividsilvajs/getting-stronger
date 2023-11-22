@@ -18,6 +18,8 @@ body {
   margin: auto;
 }
 
+/* BUTTON */
+
 button {
   cursor: pointer;
   border: none;
@@ -47,4 +49,10 @@ button {
   padding: 5px;
   border-radius: 6px;
   font-weight: normal;
+}
+
+/* A */
+
+a {
+  text-decoration: none;
 }
