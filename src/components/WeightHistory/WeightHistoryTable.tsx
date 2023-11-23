@@ -29,6 +29,8 @@ const WeightHistoryTable = () => {
 	return (
 		<div className='table-container'>
 			<SelectWeightsButtons
+				weightBlocks={weightBlocks()}
+				currentBlockToShow={currentBlockToShow}
 				setCurrentBlockToShow={setCurrentBlockToShow}
 			/>
 			<table>
