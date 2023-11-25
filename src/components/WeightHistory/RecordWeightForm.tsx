@@ -1,4 +1,8 @@
-const RecordWeightForm = () => {
+interface RecordWeightFormProps {
+	setShowRecordWeightForm: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+const RecordWeightForm = ({ setShowRecordWeightForm }: RecordWeightFormProps) => {
 
 	return (
 		<div className='form-container'>
@@ -9,7 +13,7 @@ const RecordWeightForm = () => {
 					<input className='info-input' type='date' />
 					<div style={{marginBottom: 8}}>
 						<input type='submit' value='Registrar' />
-						<input type='button' value='Cancelar' />
+						<input onClick={() => setShowRecordWeightForm(false)} type='button' value='Cancelar' />
 					</div>
 				</form>
 			</div>
