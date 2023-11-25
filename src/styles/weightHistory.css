@@ -67,6 +67,18 @@ tbody tr:last-of-type {
   border-radius: 0 0 6px 6px;
 }
 
+.card-container {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid #000000;
+}
+
+.info-input {
+  margin-bottom: 12px;
+  text-align: center;
+  padding: 4px;
+}
+
 @media (max-width: 1050px) {
 
   .container {
