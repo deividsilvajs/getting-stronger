@@ -14,7 +14,7 @@ const RecordWeightForm = ({ setShowRecordWeightForm }: RecordWeightFormProps) =>
 					<input className='info-input' type='text' placeholder='Digite o peso' />
 					<input className='info-input' type='date' />
 					<div className='buttons-group'>
-						<button onClick={() => setShowRecordWeightForm(false)} className='cancel-button' type='button'>
+						<button onClick={() => setShowRecordWeightForm(false)} type='button'>
 							Voltar
 						</button>
 						<button style={{ padding: 6, borderRadius: '0 0 6px 0' }} className='success-button' type='submit'>Salvar</button>

@@ -30,16 +30,6 @@ thead tr {
   border-right: 2px solid #BBDEC6;
 }
 
-.thead-tag {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.thead-icon {
-  margin-left: 2px;
-}
-
 th, td {
   padding: 10px 15px;
 }
@@ -57,13 +47,6 @@ tbody tr:nth-of-type(even) {
 
 tbody tr:last-of-type {
   border-bottom: none;
-}
-
-#record-button {
-  font-size: 1em;
-  padding: 10px;
-  width: 100%;
-  border-radius: 0 0 6px 6px;
 }
 
 .info-input {

@@ -4,9 +4,16 @@ interface RecordWeightButtonProps {
 
 const RecordWeightButton = ({ setShowRecordWeightForm }: RecordWeightButtonProps) => {
 
+	const style: React.CSSProperties = {
+  		fontSize: '1em',
+  		padding: '10px',
+  		width: '100%',
+  		borderRadius: '0 0 6px 6px'
+	}
+
 	return (
-		<button 
-			id='record-button'
+		<button
+			style={style}
 			className='success-button'
 			onClick={() => {
 				setShowRecordWeightForm(true)

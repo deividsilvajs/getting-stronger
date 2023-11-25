@@ -13,11 +13,6 @@ body {
   font-family: sans-serif;
 }
 
-.container {
-  max-width: 1000px;
-  margin: auto;
-}
-
 form {
   display: flex;
   flex-direction: column;
@@ -40,24 +35,6 @@ button {
 
 .success-button:hover {
   background-color: #26464E;
-}
-
-#homepage-button {
-  border-bottom: 2px solid #010300;
-  padding: 8px;
-  font-size: 0.8em;
-}
-
-#delete-button {
-  background-color: #DC3545;
-  color: var(--light-text);
-  padding: 5px;
-  border-radius: 6px;
-  font-weight: normal;
-}
-
-.cancel-button {
-  font-weight: normal;
 }
 
 /* A */
