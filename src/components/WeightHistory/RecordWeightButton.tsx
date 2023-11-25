@@ -18,7 +18,7 @@ const RecordWeightButton = ({ setShowRecordWeightForm }: RecordWeightButtonProps
 			onClick={() => {
 				setShowRecordWeightForm(true)
 			}}
-		>Salvar</button>
+		>+ Peso</button>
 	)
 
 }
