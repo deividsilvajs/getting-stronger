@@ -42,3 +42,8 @@ button {
 a {
   text-decoration: none;
 }
+
+label {
+  font-size: 0.8em;
+  margin-bottom: 2px;
+}

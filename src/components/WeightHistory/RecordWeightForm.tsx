@@ -16,7 +16,9 @@ const RecordWeightForm = ({ setShowRecordWeightForm }: RecordWeightFormProps) =>
 			<Form.Content>
 				<h2 style={{ marginBottom: 12 }}>Novo Peso</h2>
 				<form>
-					<input className='info-input' type='text' placeholder='Digite o peso' />
+					<label>Digite o peso:</label>
+					<input className='info-input' type='text' />
+					<label>Selecione a data de pesagem:</label>
 					<input className='info-input' type='date' />
 					<div className='buttons-group'>
 						<BackButton goBack={goBackToHomePage} />
