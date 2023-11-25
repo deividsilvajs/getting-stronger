@@ -1,5 +1,6 @@
 import Form from 'components/Forms/index'
 import BackButton from 'components/BackButton'
+import SaveButton from 'components/SaveButton'
 
 interface RecordWeightFormProps {
 	setShowRecordWeightForm: React.Dispatch<React.SetStateAction<boolean>>
@@ -22,7 +23,7 @@ const RecordWeightForm = ({ setShowRecordWeightForm }: RecordWeightFormProps) =>
 					<input className='info-input' type='date' />
 					<div className='buttons-group'>
 						<BackButton goBack={goBackToHomePage} />
-						<button style={{ padding: 6, borderRadius: '0 0 6px 0' }} className='success-button' type='submit'>Salvar</button>
+						<SaveButton />
 					</div>
 				</form>
 			</Form.Content>
