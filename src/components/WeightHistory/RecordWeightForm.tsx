@@ -1,10 +1,15 @@
 import Form from 'components/Forms/index'
+import BackButton from 'components/BackButton'
 
 interface RecordWeightFormProps {
 	setShowRecordWeightForm: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 const RecordWeightForm = ({ setShowRecordWeightForm }: RecordWeightFormProps) => {
+
+	const goBackToHomePage = () => {
+		setShowRecordWeightForm(false)
+	}
 
 	return (
 		<Form.Container>
@@ -14,9 +19,7 @@ const RecordWeightForm = ({ setShowRecordWeightForm }: RecordWeightFormProps) =>
 					<input className='info-input' type='text' placeholder='Digite o peso' />
 					<input className='info-input' type='date' />
 					<div className='buttons-group'>
-						<button onClick={() => setShowRecordWeightForm(false)} type='button'>
-							Voltar
-						</button>
+						<BackButton goBack={goBackToHomePage} />
 						<button style={{ padding: 6, borderRadius: '0 0 6px 0' }} className='success-button' type='submit'>Salvar</button>
 					</div>
 				</form>
