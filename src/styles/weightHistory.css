@@ -5,10 +5,9 @@
   margin-bottom: 30px;
 }
 
-#select-buttons {
+.buttons-group {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 8px;
 }
 
 .select-button {
@@ -70,7 +69,6 @@ tbody tr:last-of-type {
 .card-container {
   display: flex;
   flex-direction: column;
-  border-bottom: 2px solid #000000;
 }
 
 .info-input {

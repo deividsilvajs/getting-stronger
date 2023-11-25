@@ -31,7 +31,7 @@ const SelectWeightsButtons = ({ weightBlocks, currentBlockToShow, setCurrentBloc
 	}, [currentBlockToShow, weightBlocks])
 
 	return (
-		<div id='select-buttons'>
+		<div className='buttons-group'>
 			<button
 				onClick={() => setCurrentBlockToShow(currentBlock => currentBlock - 1)}
 				style={{ marginRight: 8, visibility: previousVisibility }} className='select-button'>Anterior</button>
