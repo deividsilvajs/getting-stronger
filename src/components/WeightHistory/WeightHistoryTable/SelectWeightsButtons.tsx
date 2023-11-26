@@ -30,8 +30,13 @@ const SelectWeightsButtons = ({ weightBlocks, currentBlockToShow, setCurrentBloc
 		}
 	}, [currentBlockToShow, weightBlocks])
 
+	const style = {
+		display: 'flex',
+  		justifyContent: 'space-between'
+	}
+
 	return (
-		<div className='buttons-group'>
+		<div style={style}>
 			<button
 				onClick={() => setCurrentBlockToShow(currentBlock => currentBlock - 1)}
 				style={{ marginRight: 8, visibility: previousVisibility }} className='select-button'>{'<< Anterior'}</button>
