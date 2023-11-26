@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom'
 
+import Logo from 'components/Logo'
+
 const Main = () => {
 
 	return (
 		<div>
-            <h1>Getting Stronger</h1>
+			<Logo />
             <Link to='/weight-history'>Histórico de Peso</Link>
         </div>
 	)
