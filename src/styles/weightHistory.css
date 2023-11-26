@@ -21,11 +21,12 @@ table {
   width: 100%;
   overflow: hidden;
   text-align: center;
-  border-radius: 6px 6px 0 0;
+  border-radius: 6px;
+  margin: 6px 0;
 }
 
 thead tr {
-  background-color: #000000;
+  background-color: #2C9FA3;
   color: #FFFFFF;
 }
 
@@ -43,7 +44,7 @@ tbody tr:nth-of-type(even) {
 }
 
 tbody tr:last-of-type {
-  border-bottom: none;
+  border-bottom: 2px solid #000000;
 }
 
 .info-input {

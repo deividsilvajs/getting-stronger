@@ -5,20 +5,23 @@ interface RecordWeightButtonProps {
 const RecordWeightButton = ({ setShowRecordWeightForm }: RecordWeightButtonProps) => {
 
 	const style: React.CSSProperties = {
-  		fontSize: '1em',
-  		padding: '10px',
-  		width: '100%',
-  		borderRadius: '0 0 6px 6px'
+  		fontSize: '0.8em',
+  		padding: 6,
+  		borderRadius: '6px',
 	}
 
 	return (
-		<button
-			style={style}
-			className='success-button'
-			onClick={() => {
-				setShowRecordWeightForm(true)
-			}}
-		>+ Peso</button>
+		<div style={{ textAlign: 'right' }}>
+			<button
+				style={style}
+				className='success-button'
+				onClick={() => {
+					setShowRecordWeightForm(true)
+				}}
+			>
+				Salvar
+			</button>
+		</div>
 	)
 
 }
