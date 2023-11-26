@@ -5,16 +5,18 @@ import { Weights } from 'types/weight'
 import SelectWeightsButtons from './WeightHistoryTable/SelectWeightsButtons'
 import Table from './WeightHistoryTable/Table'
 
-import { testWeights } from 'testData'
+interface WeightHistoryTableProps {
+	weights: Weights
+}
 
-const WeightHistoryTable = () => {
+const WeightHistoryTable = ({ weights }: WeightHistoryTableProps) => {
 
 	const [currentBlockToShow, setCurrentBlockToShow] = useState(0)
 
 	const weightBlocks = () => {
 		let currentBlock = 0
 		const blocks: Weights[] = [[]]
-		testWeights.forEach(weight => {
+		weights.forEach(weight => {
 			if (blocks[currentBlock].length < 6) {
 				blocks[currentBlock].push(weight)
 			} else {
