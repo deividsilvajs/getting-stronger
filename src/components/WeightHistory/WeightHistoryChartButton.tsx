@@ -1,6 +1,6 @@
 const WeightHistoryChartButton = () => {
 	return (
-		<button>Gráfico de Evolução</button>
+		<button>Evolução</button>
 	)
 }
 

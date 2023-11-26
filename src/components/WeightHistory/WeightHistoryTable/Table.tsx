@@ -12,7 +12,7 @@ interface TableProps {
 const Table = ({ weightBlocks, currentBlockToShow }: TableProps) => {
 
     return (
-        <table>
+        <table style={{ marginTop: 4 }}>
             <thead>
                 <tr>
                     <th>Data</th>
