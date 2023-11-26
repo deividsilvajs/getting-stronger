@@ -11,8 +11,11 @@
 }
 
 .select-button {
-  border-bottom: 1px solid #010300;
-  font-weight: normal;
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 3px 6px;
+  border-radius: 6px;
+  font-size: 0.7em;
 }
 
 table {
@@ -44,7 +47,7 @@ tbody tr:nth-of-type(even) {
 }
 
 tbody tr:last-of-type {
-  border-bottom: 2px solid #000000;
+  border-bottom: 2px solid #2C9FA3;
 }
 
 .info-input {

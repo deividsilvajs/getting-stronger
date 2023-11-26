@@ -8,6 +8,7 @@ const RecordWeightButton = ({ setShowRecordWeightForm }: RecordWeightButtonProps
   		fontSize: '0.8em',
   		padding: 6,
   		borderRadius: '6px',
+  		marginTop: 6
 	}
 
 	return (
