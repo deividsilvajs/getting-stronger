@@ -23,7 +23,11 @@ const RecordWeightForm = ({ setWeights, setShowRecordWeightForm }: RecordWeightF
 			weight: Number(weight)
 		}
 
-		setWeights(weights => [...weights, data])
+		setWeights(weights => {
+			const orderedWeights = [...weights, data]
+			.sort((a, b) => a.id.localeCompare(b.id)).reverse()
+			return orderedWeights
+		})
 		setShowRecordWeightForm(false)
 
 	}
