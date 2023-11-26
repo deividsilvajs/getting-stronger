@@ -2,15 +2,12 @@ import { Link } from 'react-router-dom'
 
 const HomePageButton = () => {
 
-	const style: React.CSSProperties = {
-  		borderBottom: '2px solid #010300',
-  		padding: '8px',
-  		fontSize: '0.8em'
-	}
-
 	return (
-		<button style={style}>
-			<Link to='/'>Página Inicial</Link>
+		<button style={{ padding: '4px' }}>
+			<Link style={{ display: 'flex', alignItems: 'center' }} to='/'>
+				<span>Home</span>
+				<img width={20} src={require('logo.png')} alt='Página Inicial' />
+			</Link>
 		</button>
 	)
 
