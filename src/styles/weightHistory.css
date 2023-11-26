@@ -25,9 +25,8 @@ table {
 }
 
 thead tr {
-  background-color: #BBDEC6;
-  border-left: 2px solid #BBDEC6;
-  border-right: 2px solid #BBDEC6;
+  background-color: #000000;
+  color: #FFFFFF;
 }
 
 th, td {
@@ -36,8 +35,6 @@ th, td {
 
 tbody tr {
   border-bottom: 1px solid #DDDDDD;
-  border-left: 2px solid #BBDEC6;
-  border-right: 2px solid #BBDEC6;
   box-sizing: border-box;
 }
 

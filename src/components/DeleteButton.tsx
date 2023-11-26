@@ -2,7 +2,7 @@ const DeleteButton = () => {
 
     const style: React.CSSProperties = {
         backgroundColor: '#DC3545',
-        color: 'var(--light-text)',
+        color: '#FFFFFF',
         padding: '5px',
         borderRadius: '6px',
         fontWeight: 'normal'

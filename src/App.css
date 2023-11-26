@@ -1,12 +1,6 @@
-:root {
-  --dark-text: #010300;
-  --light-text: #F7F8FC;
-}
-
 * {
   margin: 0;
   padding: 0;
-  color: var(--dark-text);
 }
 
 body {
@@ -28,19 +22,20 @@ button {
 }
 
 .success-button {
-  background-color: #314C53;
-  color: var(--light-text);
+  background-color: #F03813;
+  color: #FFFFFF;
   transition: background-color 500ms;
 }
 
 .success-button:hover {
-  background-color: #26464E;
+  background-color: #C92F10;
 }
 
 /* A */
 
 a {
   text-decoration: none;
+  color: #000000;
 }
 
 label {

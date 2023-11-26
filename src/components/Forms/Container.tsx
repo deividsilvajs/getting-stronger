@@ -10,7 +10,7 @@ const Container = ({ children }: ContainerProps) => {
         top: 0,
         width: '100vw',
         height: '100vh',
-        backgroundColor: 'white',
+        backgroundColor: '#FFFFFF',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
