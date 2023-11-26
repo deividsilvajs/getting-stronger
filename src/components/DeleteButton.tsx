@@ -1,16 +1,8 @@
 const DeleteButton = () => {
 
-    const style: React.CSSProperties = {
-        backgroundColor: '#DC3545',
-        color: '#FFFFFF',
-        padding: '5px',
-        borderRadius: '6px',
-        fontWeight: 'normal'
-    }
-
     return (
-        <button style={style}>
-            Excluir
+        <button>
+            <img style={{ marginTop: 2 }} width={18} src={require('trash.png')} alt='Excluir' />
         </button>
     )
 }
