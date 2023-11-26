@@ -1,12 +1,31 @@
+import { useState } from 'react'
+
+import { Weight, Weights } from 'types/weight'
+
 import Form from 'components/Forms/index'
 import BackButton from 'components/BackButton'
 import SaveButton from 'components/SaveButton'
 
 interface RecordWeightFormProps {
+	setWeights: React.Dispatch<React.SetStateAction<Weights>>
 	setShowRecordWeightForm: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const RecordWeightForm = ({ setShowRecordWeightForm }: RecordWeightFormProps) => {
+const RecordWeightForm = ({ setWeights, setShowRecordWeightForm }: RecordWeightFormProps) => {
+
+	const [date, setDate] = useState('')
+	const [weight, setWeight] = useState('')
+
+	const addWeight = () => {
+
+		const data: Weight = {
+			id: date,
+			weight: Number(weight)
+		}
+
+		console.log(data)
+
+	}
 
 	const goBackToHomePage = () => {
 		setShowRecordWeightForm(false)
@@ -16,11 +35,14 @@ const RecordWeightForm = ({ setShowRecordWeightForm }: RecordWeightFormProps) =>
 		<Form.Container>
 			<Form.Content>
 				<h2 style={{ marginBottom: 12 }}>Novo Peso</h2>
-				<form>
+				<form onSubmit={e => {
+					e.preventDefault()
+					addWeight()
+				}}>
 					<label>Digite o peso:</label>
-					<input className='info-input' type='text' placeholder='Ex: 70.5' />
+					<input onChange={e => setWeight(e.target.value)} className='info-input' type='text' placeholder='Ex: 70.5' required />
 					<label>Selecione a data de pesagem:</label>
-					<input className='info-input' type='date' />
+					<input onChange={e => setDate(e.target.value)} className='info-input' type='date' required />
 					<div style={{ display: 'flex', justifyContent: 'space-between' }}>
 						<BackButton goBack={goBackToHomePage} />
 						<SaveButton />
