@@ -23,7 +23,7 @@ const RecordWeightForm = ({ setWeights, setShowRecordWeightForm }: RecordWeightF
 			weight: Number(weight)
 		}
 
-		console.log(data)
+		setWeights(weights => [...weights, data])
 
 	}
 

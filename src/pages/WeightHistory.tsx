@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import 'styles/weightHistory.css'
 
@@ -13,6 +13,10 @@ const WeightHistory = () => {
 
 	const [weights, setWeights] = useState<Weights>([])
 	const [showRecordWeightForm, setShowRecordWeightForm] = useState(false)
+
+	useEffect(() => {
+		console.log(weights)
+	}, [weights])
 
 	return (
 		<div className='container'>
