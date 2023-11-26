@@ -24,6 +24,7 @@ const RecordWeightForm = ({ setWeights, setShowRecordWeightForm }: RecordWeightF
 		}
 
 		setWeights(weights => [...weights, data])
+		setShowRecordWeightForm(false)
 
 	}
 
