@@ -21,7 +21,7 @@ const RecordWeightForm = ({ setShowRecordWeightForm }: RecordWeightFormProps) =>
 					<input className='info-input' type='text' placeholder='Ex: 70.5' />
 					<label>Selecione a data de pesagem:</label>
 					<input className='info-input' type='date' />
-					<div className='buttons-group'>
+					<div style={{ display: 'flex', justifyContent: 'space-between' }}>
 						<BackButton goBack={goBackToHomePage} />
 						<SaveButton />
 					</div>
