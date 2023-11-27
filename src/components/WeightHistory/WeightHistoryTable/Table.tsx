@@ -3,6 +3,8 @@ import { format, parseISO } from 'date-fns'
 import { Weights } from 'types/weight'
 
 import DeleteButton from 'components/DeleteButton'
+import { useContext } from 'react'
+import { WeightsContext } from 'WeightContext'
 
 interface TableProps {
     weightBlocks: Weights[],
@@ -10,6 +12,15 @@ interface TableProps {
 }
 
 const Table = ({ weightBlocks, currentBlockToShow }: TableProps) => {
+
+    const [weights, setWeights] = useContext(WeightsContext)
+
+    const deleteWeight = (id: string) => {
+        const otherWeights = weights.filter(weight => {
+            return weight.id !== id
+        })
+        setWeights(otherWeights)
+    }
 
     return (
         <table>
@@ -26,7 +37,7 @@ const Table = ({ weightBlocks, currentBlockToShow }: TableProps) => {
                         <tr key={data.id}>
                             <td>{format(parseISO(data.id), 'dd/MM')}</td>
                             <td>{data.weight}kg</td>
-                            <td><DeleteButton /></td>
+                            <td><div onClick={() => deleteWeight(data.id)}><DeleteButton /></div></td>
                         </tr>
                     )
                 })}
