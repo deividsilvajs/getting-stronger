@@ -4,3 +4,7 @@ export interface Weight {
 }
 
 export type Weights = Weight[]
+
+export type SetWeights = React.Dispatch<React.SetStateAction<Weights>>
+
+export type WeightsState = [Weights, SetWeights]

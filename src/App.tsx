@@ -1,6 +1,7 @@
 import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 
+import WeightsProvider from 'WeightContext'
 import Main from 'pages/Main'
 import WeightHistory from 'pages/WeightHistory'
 
@@ -13,12 +14,14 @@ const App = () => {
 
     return (
         <div style={style}>
-            <Router>
-                <Routes>
-                    <Route path='/' element={<Main />} />
-                    <Route path='/weight-history' element={<WeightHistory />} />
-                </Routes>
-            </Router>
+            <WeightsProvider>
+                <Router>
+                    <Routes>
+                        <Route path='/' element={<Main />} />
+                        <Route path='/weight-history' element={<WeightHistory />} />
+                    </Routes>
+                </Router>
+            </WeightsProvider>
         </div>
     )
 
