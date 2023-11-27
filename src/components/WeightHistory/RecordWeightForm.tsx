@@ -7,64 +7,99 @@ import BackButton from 'components/BackButton'
 import SaveButton from 'components/SaveButton'
 
 interface RecordWeightFormProps {
+	weights: Weights
 	setWeights: React.Dispatch<React.SetStateAction<Weights>>
 	setShowRecordWeightForm: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const RecordWeightForm = ({ setWeights, setShowRecordWeightForm }: RecordWeightFormProps) => {
+const RecordWeightForm = ({ weights, setWeights, setShowRecordWeightForm }: RecordWeightFormProps) => {
 
 	const [date, setDate] = useState('')
 	const [weight, setWeight] = useState('')
 
-  	useEffect(() => {
+	useEffect(() => {
+
 		if (weight.includes(',')) {
+
 			setWeight(weight.replace(',', '.'))
+
 		}
-  	}, [weight]);
 
- 	const validWeight = (inputWeight: string) => {
+	}, [weight])
 
-	    const regex = /^[0-9.]+$/
+	const validId = (id: string) => {
 
-	    if (regex.test(inputWeight)) {
+		const repeated = weights.map(weight => {
 
-	      return true
+			return weight.id === id
 
-	    } else {
+		})
 
-	      return false
+		if (repeated[0]) {
 
-	    }
- 	}
+			return false
+
+		} else {
+
+			return true
+
+		}
+
+	}
+
+	const validWeight = (inputWeight: string) => {
+
+		const regex = /^[0-9.]+$/
+
+		if (regex.test(inputWeight)) {
+
+			return true
+
+		} else {
+
+			return false
+
+		}
+	}
 
 
 	const addWeight = () => {
 
-		if (validWeight(weight)) {
+		if (validId(date)) {
 
-			const data: Weight = {
-				id: date,
-				weight: Number(weight)
+			if (validWeight(weight)) {
+
+				const data: Weight = {
+					id: date,
+					weight: Number(weight)
+				}
+
+				setWeights(weights => {
+					const orderedWeights = [...weights, data]
+						.sort((a, b) => a.id.localeCompare(b.id)).reverse()
+					return orderedWeights
+				})
+
+				setShowRecordWeightForm(false)
+
+			} else {
+
+				alert('Insira um peso válido!')
+
 			}
-
-			setWeights(weights => {
-				const orderedWeights = [...weights, data]
-				.sort((a, b) => a.id.localeCompare(b.id)).reverse()
-				return orderedWeights
-			})
-
-			setShowRecordWeightForm(false)
 
 		} else {
 
-			alert('Insira um peso válido!')
+			alert('Já existe um peso registrado nessa data!')
 
 		}
 
 	}
 
 	const goBackToHomePage = () => {
+
 		setShowRecordWeightForm(false)
+
 	}
 
 	return (

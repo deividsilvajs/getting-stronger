@@ -21,11 +21,12 @@ const WeightHistory = () => {
 			<RecordWeightButton setShowRecordWeightForm={setShowRecordWeightForm} />
 			{
 				showRecordWeightForm
-				? <RecordWeightForm 
+					? <RecordWeightForm
+						weights={weights}
 						setWeights={setWeights}
-						setShowRecordWeightForm={setShowRecordWeightForm} 
+						setShowRecordWeightForm={setShowRecordWeightForm}
 					/>
-				: null
+					: null
 			}
 		</div>
 	)
