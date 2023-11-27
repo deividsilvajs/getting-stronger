@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import { Weight, Weights } from 'types/weight'
 
@@ -16,19 +16,50 @@ const RecordWeightForm = ({ setWeights, setShowRecordWeightForm }: RecordWeightF
 	const [date, setDate] = useState('')
 	const [weight, setWeight] = useState('')
 
+  	useEffect(() => {
+		if (weight.includes(',')) {
+			setWeight(weight.replace(',', '.'))
+		}
+  	}, [weight]);
+
+ 	const validWeight = (inputWeight: string) => {
+
+	    const regex = /^[0-9.]+$/
+
+	    if (regex.test(inputWeight)) {
+
+	      return true
+
+	    } else {
+
+	      return false
+
+	    }
+ 	}
+
+
 	const addWeight = () => {
 
-		const data: Weight = {
-			id: date,
-			weight: Number(weight)
-		}
+		if (validWeight(weight)) {
 
-		setWeights(weights => {
-			const orderedWeights = [...weights, data]
-			.sort((a, b) => a.id.localeCompare(b.id)).reverse()
-			return orderedWeights
-		})
-		setShowRecordWeightForm(false)
+			const data: Weight = {
+				id: date,
+				weight: Number(weight)
+			}
+
+			setWeights(weights => {
+				const orderedWeights = [...weights, data]
+				.sort((a, b) => a.id.localeCompare(b.id)).reverse()
+				return orderedWeights
+			})
+
+			setShowRecordWeightForm(false)
+
+		} else {
+
+			alert('Insira um peso válido!')
+
+		}
 
 	}
 
