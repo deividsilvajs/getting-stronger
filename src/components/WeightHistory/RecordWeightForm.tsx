@@ -1,18 +1,20 @@
-import { useState, useEffect } from 'react'
+import { useContext, useState, useEffect } from 'react'
 
-import { Weight, Weights } from 'types/weight'
+import { Weight } from 'types/weight'
 
 import Form from 'components/Forms/index'
 import BackButton from 'components/BackButton'
 import SaveButton from 'components/SaveButton'
 
+import { WeightsContext } from 'WeightContext'
+
 interface RecordWeightFormProps {
-	weights: Weights
-	setWeights: React.Dispatch<React.SetStateAction<Weights>>
 	setShowRecordWeightForm: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const RecordWeightForm = ({ weights, setWeights, setShowRecordWeightForm }: RecordWeightFormProps) => {
+const RecordWeightForm = ({ setShowRecordWeightForm }: RecordWeightFormProps) => {
+
+	const [weights, setWeights] = useContext(WeightsContext)
 
 	const [date, setDate] = useState('')
 	const [weight, setWeight] = useState('')

@@ -1,15 +1,15 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 
 import { Weights } from 'types/weight'
 
 import SelectWeightsButtons from './WeightHistoryTable/SelectWeightsButtons'
 import Table from './WeightHistoryTable/Table'
 
-interface WeightHistoryTableProps {
-	weights: Weights
-}
+import { WeightsContext } from 'WeightContext'
 
-const WeightHistoryTable = ({ weights }: WeightHistoryTableProps) => {
+const WeightHistoryTable = () => {
+
+	const [weights] = useContext(WeightsContext)
 
 	const [currentBlockToShow, setCurrentBlockToShow] = useState(0)
 
