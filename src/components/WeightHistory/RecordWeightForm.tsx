@@ -31,13 +31,13 @@ const RecordWeightForm = ({ setShowRecordWeightForm }: RecordWeightFormProps) =>
 
 	const validId = (id: string) => {
 
-		const repeated = weights.map(weight => {
+		const repeated = weights.filter(weight => {
 
 			return weight.id === id
 
-		})
+		})[0]
 
-		if (repeated[0]) {
+		if (repeated) {
 
 			return false
 
