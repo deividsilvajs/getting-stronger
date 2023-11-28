@@ -78,7 +78,7 @@ const RecordWeightForm = ({ setShowRecordWeightForm }: RecordWeightFormProps) =>
 
 				setWeights(weights => {
 					const orderedWeights = [...weights, data]
-						.sort((a, b) => a.id.localeCompare(b.id)).reverse()
+						.sort((a, b) => a.id.localeCompare(b.id))
 					return orderedWeights
 				})
 

@@ -1,7 +1,11 @@
-const DeleteButton = () => {
+interface DeleteButtonProps {
+    onClick?: () => void
+}
+
+const DeleteButton = ({ onClick }: DeleteButtonProps) => {
 
     return (
-        <button>
+        <button onClick={onClick}>
             <img
                 style={{ marginTop: 2 }}
                 width={18}

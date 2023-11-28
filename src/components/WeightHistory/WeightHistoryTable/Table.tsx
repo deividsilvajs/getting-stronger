@@ -35,9 +35,15 @@ const Table = ({ weightBlocks, currentBlockToShow }: TableProps) => {
                 {weightBlocks[currentBlockToShow].map(data => {
                     return (
                         <tr key={data.id}>
-                            <td>{format(parseISO(data.id), 'dd/MM')}</td>
+                            <td>
+                                {format(parseISO(data.id), 'dd/MM')}
+                            </td>
                             <td>{data.weight}kg</td>
-                            <td><div onClick={() => deleteWeight(data.id)}><DeleteButton /></div></td>
+                            <td>
+                                <DeleteButton
+                                    onClick={() => deleteWeight(data.id)}
+                                />
+                            </td>
                         </tr>
                     )
                 })}
