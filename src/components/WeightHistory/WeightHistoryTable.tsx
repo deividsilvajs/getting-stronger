@@ -4,6 +4,7 @@ import { Weights } from 'types/weight'
 
 import SelectWeightsButtons from './WeightHistoryTable/SelectWeightsButtons'
 import Table from './WeightHistoryTable/Table'
+import ConfirmDeleteWeight from './WeightHistoryTable/ConfirmDeleteWeight'
 
 import { WeightsContext } from 'WeightContext'
 
@@ -12,6 +13,7 @@ const WeightHistoryTable = () => {
 	const [weights] = useContext(WeightsContext)
 
 	const [currentBlockToShow, setCurrentBlockToShow] = useState(0)
+	const [showConfirmDeleteWeight, setShowConfirmDeleteWeight] = useState(false)
 
 	const weightBlocks = () => {
 		let currentBlock = 0
@@ -37,7 +39,15 @@ const WeightHistoryTable = () => {
 			<Table
 				weightBlocks={weightBlocks()}
 				currentBlockToShow={currentBlockToShow}
+				setShowConfirmDeleteWeight={setShowConfirmDeleteWeight}
 			/>
+			{
+				showConfirmDeleteWeight
+				? <ConfirmDeleteWeight 
+						setShowConfirmDeleteWeight={setShowConfirmDeleteWeight}
+					/>
+				: null
+			}
 		</div>
 	)
 
