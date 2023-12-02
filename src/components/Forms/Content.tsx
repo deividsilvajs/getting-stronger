@@ -5,8 +5,8 @@ interface ContentProps {
 const Content = ({ children }: ContentProps) => {
 
 	const contentContainer: React.CSSProperties = {
-  		display: 'flex',
-  		flexDirection: 'column'
+		display: 'flex',
+		flexDirection: 'column'
 	}
 
 	return (

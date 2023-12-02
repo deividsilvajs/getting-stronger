@@ -7,8 +7,8 @@ const Main = () => {
 	return (
 		<div>
 			<Logo />
-            <Link to='/weight-history'>Histórico de Peso</Link>
-        </div>
+			<Link to='/weight-history'>Histórico de Peso</Link>
+		</div>
 	)
 
 }

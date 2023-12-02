@@ -24,7 +24,7 @@ const SelectWeightsButtons = ({ weightBlocks, currentBlockToShow, setCurrentBloc
 			}
 		} else {
 			setPreviousVisibility('hidden')
-			if (weightBlocks.length > 1 ) {
+			if (weightBlocks.length > 1) {
 				setNextVisibility('visible')
 			}
 		}
@@ -32,7 +32,7 @@ const SelectWeightsButtons = ({ weightBlocks, currentBlockToShow, setCurrentBloc
 
 	const style = {
 		display: 'flex',
-  		justifyContent: 'space-between'
+		justifyContent: 'space-between'
 	}
 
 	return (

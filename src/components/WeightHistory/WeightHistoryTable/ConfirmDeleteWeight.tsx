@@ -13,8 +13,8 @@ const ConfirmDeleteWeight = ({ setShowConfirmDeleteWeight }: ConfirmDeleteWeight
 				<h2 style={{ marginBottom: 12 }}>Excluir Peso</h2>
 				<div style={{ display: 'flex', justifyContent: 'space-between' }}>
 					<BackButton goBack={() => setShowConfirmDeleteWeight(false)} />
-					<button 
-						style={{padding: 6, borderRadius: '0 0 6px 0'}}
+					<button
+						style={{ padding: 6, borderRadius: '0 0 6px 0' }}
 						className='success-button'
 						type='button'
 					>

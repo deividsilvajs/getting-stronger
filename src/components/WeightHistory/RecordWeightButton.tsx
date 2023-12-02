@@ -5,10 +5,10 @@ interface RecordWeightButtonProps {
 const RecordWeightButton = ({ setShowRecordWeightForm }: RecordWeightButtonProps) => {
 
 	const style: React.CSSProperties = {
-  		fontSize: '0.8em',
-  		padding: 6,
-  		borderRadius: '6px',
-  		marginTop: 6
+		fontSize: '0.8em',
+		padding: 6,
+		borderRadius: '6px',
+		marginTop: 6
 	}
 
 	return (

@@ -1,7 +1,7 @@
 const SaveButton = () => {
 
 	const style: React.CSSProperties = {
-		padding: 6, 
+		padding: 6,
 		borderRadius: '0 0 6px 0'
 	}
 

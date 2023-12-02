@@ -43,10 +43,10 @@ const WeightHistoryTable = () => {
 			/>
 			{
 				showConfirmDeleteWeight
-				? <ConfirmDeleteWeight 
+					? <ConfirmDeleteWeight
 						setShowConfirmDeleteWeight={setShowConfirmDeleteWeight}
 					/>
-				: null
+					: null
 			}
 		</div>
 	)
