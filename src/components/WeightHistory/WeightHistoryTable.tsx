@@ -9,7 +9,7 @@ import { WeightsContext } from 'WeightContext'
 
 const WeightHistoryTable = () => {
 
-	const [weights] = useContext(WeightsContext)
+	const [weights, setWeights] = useContext(WeightsContext)
 
 	const [currentBlockToShow, setCurrentBlockToShow] = useState(0)
 
@@ -35,6 +35,7 @@ const WeightHistoryTable = () => {
 				setCurrentBlockToShow={setCurrentBlockToShow}
 			/>
 			<Table
+				setWeights={setWeights}
 				weightBlocks={weightBlocks()}
 				currentBlockToShow={currentBlockToShow}
 			/>

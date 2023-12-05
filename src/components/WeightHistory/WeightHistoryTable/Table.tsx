@@ -1,15 +1,28 @@
 import { format, parseISO } from 'date-fns'
 
-import { Weights } from 'types/weight'
+import { SetWeights, Weights } from 'types/weight'
 
 import DeleteButton from 'components/DeleteButton'
 
 interface TableProps {
+    setWeights: SetWeights
     weightBlocks: Weights[],
     currentBlockToShow: number
 }
 
-const Table = ({ weightBlocks, currentBlockToShow }: TableProps) => {
+const Table = ({ setWeights, weightBlocks, currentBlockToShow }: TableProps) => {
+
+    const deleteWeight = (id: string) => {
+
+        setWeights(weights => {
+
+            return weights.filter(weight => {
+                return weight.id !== id
+            })
+
+        })
+
+    }
 
     return (
         <table>
@@ -29,7 +42,9 @@ const Table = ({ weightBlocks, currentBlockToShow }: TableProps) => {
                             </td>
                             <td>{data.weight}kg</td>
                             <td>
-                                <DeleteButton />
+                                <DeleteButton
+                                    onClick={() => deleteWeight(data.id)}
+                                />
                             </td>
                         </tr>
                     )
