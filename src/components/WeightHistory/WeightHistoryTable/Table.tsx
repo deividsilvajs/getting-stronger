@@ -7,10 +7,9 @@ import DeleteButton from 'components/DeleteButton'
 interface TableProps {
     weightBlocks: Weights[],
     currentBlockToShow: number
-    setShowConfirmDeleteWeight: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const Table = ({ weightBlocks, currentBlockToShow, setShowConfirmDeleteWeight }: TableProps) => {
+const Table = ({ weightBlocks, currentBlockToShow }: TableProps) => {
 
     return (
         <table>
@@ -30,9 +29,7 @@ const Table = ({ weightBlocks, currentBlockToShow, setShowConfirmDeleteWeight }:
                             </td>
                             <td>{data.weight}kg</td>
                             <td>
-                                <DeleteButton
-                                    onClick={() => setShowConfirmDeleteWeight(true)}
-                                />
+                                <DeleteButton />
                             </td>
                         </tr>
                     )
